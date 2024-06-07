@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.disneyplus.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_solicitar"
+        android:name="com.example.disneyplus.ui.solicitar.SolicitarFragment"
+        android:label="@string/menu_solitar"
+        tools:layout="@layout/fragment_solicitar" />
+
+    <fragment
+        android:id="@+id/nav_login"
+        android:name="com.example.disneyplus.ui.login.LoginFragment"
+        android:label="@string/menu_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_nav_login_to_displeyFragment"
+            app:destination="@id/nav_displey" />
+        <action
+            android:id="@+id/action_nav_login_to_nav_home"
+            app:destination="@id/nav_home" />
+        <action
+            android:id="@+id/action_nav_login_to_loginCreateFragment"
+            app:destination="@id/loginCreateFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_displey"
+        android:name="com.example.disneyplus.ui.display.DispleyFragment"
+        android:label="menu_displey"
+        tools:layout="@layout/fragment_displey" />
+
+    <fragment
+        android:id="@+id/loginCreateFragment"
+        android:name="com.example.disneyplus.ui.login.LoginCreateFragment"
+        android:label="Crear Usuario"
+        tools:layout="@layout/fragment_login_create" />
+    <fragment
+        android:id="@+id/detalleFragment"
+        android:name="com.example.disneyplus.ui.detalles.DetalleFragment"
+        android:label="fragment_detalle"
+        tools:layout="@layout/fragment_detalle" />
+    <fragment
+        android:id="@+id/detallesFragment"
+        android:name="com.example.disneyplus.DetallesFragment"
+        android:label="fragment_detalles"
+        tools:layout="@layout/fragment_detalles" />
+    <fragment
+        android:id="@+id/solicitar_comic_Fragment"
+        android:name="com.example.disneyplus.Solicitar_comic_Fragment"
+        android:label="fragment_solicitar_comic_"
+        tools:layout="@layout/fragment_solicitar_comic_" />
+    <fragment
+        android:id="@+id/item_comicFragment"
+        android:name="com.example.disneyplus.Item_comicFragment"
+        android:label="fragment_item_comic"
+        tools:layout="@layout/fragment_item_comic" />
+</navigation>
